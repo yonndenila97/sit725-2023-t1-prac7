@@ -33,6 +33,7 @@
           </ul>
         </div>
     </nav>
+
     <main class="main-body">
         <div class="container">  
           <div class="row">
@@ -44,13 +45,13 @@
                 <img class="materialboxed materialboxed-image" src="images/livedemo.png">
               </div>
             <div class="col s12 center-align">
-                <a class="waves-effect waves-light btn click-me-button" id="clickMeButton"><i class="material-icons left">auto_fix_high</i>Click Me</a>
+                <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Click Me</a>
             </div>
         </div>
             <div class="row" id="card-section">
               <div class="col s4 center-align">
-                <div class="card medium">​
-                    <div class="card-image waves-effect waves-block waves-light">​
+                <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="images/kitten.jpg">
                 </div>
                     <div class="card-content">
@@ -65,6 +66,42 @@
         </div>
     </div>
     </div>
+
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="row modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 center-align">
+                <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Compiled and minified JavaScript -->

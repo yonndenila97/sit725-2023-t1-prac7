@@ -11,7 +11,7 @@
 
     background-color: #F28487;
     color: white;
-    height: calc(100vh - 64px);
+    height: calc(140vh - 64px);
 }
 
 .materialboxed-image {
@@ -23,4 +23,7 @@
 .click-me-button {
     background-color: #EE6E73;
     margin-top: 50px;
+}
+.card-text{
+    color: black;
 }
