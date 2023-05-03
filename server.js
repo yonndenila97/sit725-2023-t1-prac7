@@ -1,27 +1,10 @@
 var express = require("express");
 var app = express();
-const { MongoClient, ConnectionCheckOutFailedEvent } = require('mongodb');
-const uri = 'mongodb+srv://admin:admin@cluster0.y8fnicl.mongodb.net/?retryWrites=true&w=majority';
-const client = new MongoClient(uri);
-let dbCollection;
+require('./dbConnection');
 
 app.use(express.static(__dirname+'/public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
-
-function dbConnection(collectionName) {
-    client.connect(err => {
-        dbCollection = client.db().collection(collectionName);
-        if (!err) {
-            console.log('DB Connected');
-            console.log(dbCollection);
-        }
-        else {
-            console.error(err);
-        }
-    });
-}
 
 app.post('/api/Cats', (req,res) => {
     let cat = req.body;
@@ -48,15 +31,14 @@ app.get('/api/Cats', (req, res) => {
 })
 
 function insert(cat, callback) {
-    dbCollection.insertOne(cat, callback);
+    // dbCollection.insertOne(cat, callback);
 }
 
 function getAllCats(callback) {
-    dbCollection.find().toArray(callback);
+    // dbCollection.find().toArray(callback);
 }
 
 var port = process.env.port || 3000;
 app.listen(port,()=>{
     console.log("App listening to: " + port);
-    dbConnection('Cats');
 })
