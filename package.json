@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "name": "sit725-2023-t1-prac3-",
-  "description": "",
+  "description": "pactice 5 imported from prac 4",
   "version": "1.0.0",
   "main": "server.js",
   "repository": {
@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/yonndenila97/sit725-2023-t1-prac3-/issues"
   },
-  "homepage": "https://github.com/yonndenila97/sit725-2023-t1-prac3-#readme"
+  "homepage": "https://github.com/yonndenila97/sit725-2023-t1-prac3-#readme",
+  "devDependencies": {}
 }
