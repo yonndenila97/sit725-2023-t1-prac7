@@ -6,11 +6,11 @@ const client = new MongoClient(uri);
     client.connect(err => {
         if (!err) {
             console.log('DB Connected');
-            console.log(dbCollection);
         }
         else {
             console.error(err);
         }
     });
 
+module.exports = client;
 
