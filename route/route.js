@@ -11,6 +11,13 @@ router.post('/api/Cats', (req, res) => {
 router.get('/api/Cats', (req, res) => {
     controller.getAllCats(req, res);
 
-})
+});
+
+router.delete('api/Cats', (req, res) => {
+    controller.deleteCats(req, res);
+
+});
+
+
 
 module.exports = router;

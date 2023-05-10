@@ -3,9 +3,9 @@ let model = require('../model/model');
 const createCat = (req, res) => {
     //lead to model
     let cat = req.body;
-    model.insertCat(cat, (err, result) => {
-        if (err) {
-            res.json({ statusCode: 400, message: err });
+    model.insertCat(cat, (error, result) => {
+        if (error) {
+            res.json({ statusCode: 400, message: error });
         }
         else {
             res.json({ statusCode: 200, data: result, message: 'Cat successfully added' });
@@ -15,9 +15,9 @@ const createCat = (req, res) => {
 
 const getAllCats = (req, res) => {
     //lead to model
-    model.getAllCats((err, result) => {
-        if (err) {
-            res.json({ statusCode: 400, message: err });
+    model.getAllCats((error, result) => {
+        if (error) {
+            res.json({ statusCode: 400, message: error });
         }
         else {
             res.json({ statusCode: 200, data: result, message: 'Successful' });
@@ -25,4 +25,16 @@ const getAllCats = (req, res) => {
     });
 }
 
-module.exports = {createCat, getAllCats}
+const deleteCats = (req, res) => {
+    let cat = req.body;
+    model.remove(cat, (error, result) => {
+        if (error) {
+            res.json({ statusCode: 400, message: error });
+        }
+        else {
+            res.json({ statusCode: 200, data: result, message: 'Successfully Removed'});
+        }
+    });
+}
+
+module.exports = { createCat, getAllCats, deleteCats}

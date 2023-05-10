@@ -1,11 +1,15 @@
 {
   "dependencies": {
+    "chai": "^4.3.7",
     "express": "^4.18.2",
+    "mocha": "^10.2.0",
     "mongodb": "^4.16.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "request": "^2.88.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha --reporter spec"
   },
   "name": "sit725-2023-t1-prac3-",
   "description": "pactice 5 imported from prac 4",
@@ -21,5 +25,8 @@
     "url": "https://github.com/yonndenila97/sit725-2023-t1-prac3-/issues"
   },
   "homepage": "https://github.com/yonndenila97/sit725-2023-t1-prac3-#readme",
+  "directories": {
+    "test": "test"
+  },
   "devDependencies": {}
 }
