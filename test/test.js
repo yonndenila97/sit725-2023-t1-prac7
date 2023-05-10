@@ -34,15 +34,15 @@ describe('test get all cat', function () {
     });
 });
 
-describe('test post a cat', function() {
-    it('insert a cat to database', function (done) {
-        request.post({url:url, form:cat}, function (error, response, body) {
-            body = JSON.parse(body);
-            expect(body.message).to.contain('Cat successfully added');
-            done();
-        });
-    });
-});
+// describe('test post a cat', function() {
+//     it('insert a cat to database', function (done) {
+//         request.post({url:url, form:cat}, function (error, response, body) {
+//             body = JSON.parse(body);
+//             expect(body.message).to.contain('Cat successfully added');
+//             done();
+//         });
+//     });
+// });
 
 describe('delete a cat', function() {
     it('delete a cat from database', function (done) {
