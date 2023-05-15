@@ -69,8 +69,8 @@ const addCat = (cat) => {
 }
 
 let socket = io();
-socket.on('number', (message) => {
-    console.log('received from server: ' + message);
+socket.on('number', (msg) => {
+    console.log('Random number: ' + msg);
 });
 
 $(document).ready(function(){
