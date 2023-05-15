@@ -13,7 +13,7 @@
     "start": "node server.js",
     "test": "mocha --reporter spec"
   },
-  "name": "sit725-2023-t1-prac3-",
+  "name": "prac7",
   "description": "pactice 5 imported from prac 4",
   "version": "1.0.0",
   "main": "server.js",

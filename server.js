@@ -22,6 +22,6 @@ io.on('connection', (socket)=> {
 });
 
 var port = process.env.port || 3000;
-http.listen(port,()=> {
+http.listen(port, () => {
     console.log("App listening to: " + port);
-})
+});
